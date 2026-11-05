@@ -1,0 +1,214 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "crx5ia"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp8dqhi1_e/crx5ia.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_crx5ia_4h6a7821/usdex_crx5ia/crx5ia.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_crx5ia_4h6a7821/temp_crx5ia/crx5ia.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "crx5ia"
+{
+    over "Physics"
+    {
+        def MjcActuator "J1_actuator"
+        {
+            uniform double mjc:forceRange:max = 160
+            uniform double mjc:forceRange:min = -160
+            custom rel mjc:target
+            prepend rel mjc:target = </crx5ia/Physics/J1>
+        }
+
+        def MjcActuator "J2_actuator"
+        {
+            uniform double mjc:forceRange:max = 160
+            uniform double mjc:forceRange:min = -160
+            custom rel mjc:target
+            prepend rel mjc:target = </crx5ia/Physics/J2>
+        }
+
+        def MjcActuator "J3_actuator"
+        {
+            uniform double mjc:forceRange:max = 160
+            uniform double mjc:forceRange:min = -160
+            custom rel mjc:target
+            prepend rel mjc:target = </crx5ia/Physics/J3>
+        }
+
+        def MjcActuator "J4_actuator"
+        {
+            uniform double mjc:forceRange:max = 40
+            uniform double mjc:forceRange:min = -40
+            custom rel mjc:target
+            prepend rel mjc:target = </crx5ia/Physics/J4>
+        }
+
+        def MjcActuator "J5_actuator"
+        {
+            uniform double mjc:forceRange:max = 40
+            uniform double mjc:forceRange:min = -40
+            custom rel mjc:target
+            prepend rel mjc:target = </crx5ia/Physics/J5>
+        }
+
+        def MjcActuator "J6_actuator"
+        {
+            uniform double mjc:forceRange:max = 40
+            uniform double mjc:forceRange:min = -40
+            custom rel mjc:target
+            prepend rel mjc:target = </crx5ia/Physics/J6>
+        }
+
+        over "J1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "J2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "J3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "J4" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "J5" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "J6" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "base_joint"
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "world"
+        {
+            over "base_link"
+            {
+                over "base"
+                {
+                }
+
+                over "base_1"
+                {
+                }
+
+                over "J1_link"
+                {
+                    over "j1"
+                    {
+                    }
+
+                    over "j1_1"
+                    {
+                    }
+
+                    over "J2_link"
+                    {
+                        over "j2"
+                        {
+                        }
+
+                        over "j2_1"
+                        {
+                        }
+
+                        over "J3_link"
+                        {
+                            over "j3"
+                            {
+                            }
+
+                            over "j3_1"
+                            {
+                            }
+
+                            over "J4_link"
+                            {
+                                over "j4"
+                                {
+                                }
+
+                                over "j4_1"
+                                {
+                                }
+
+                                over "J5_link"
+                                {
+                                    over "j5"
+                                    {
+                                    }
+
+                                    over "j5_1"
+                                    {
+                                    }
+
+                                    over "J6_link"
+                                    {
+                                        over "j6"
+                                        {
+                                        }
+
+                                        over "j6_1"
+                                        {
+                                        }
+
+                                        over "flange"
+                                        {
+                                            over "fanuc_flange"
+                                            {
+                                            }
+
+                                            over "tool_center_point"
+                                            {
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "wbase"
+                {
+                }
+            }
+        }
+    }
+}
+

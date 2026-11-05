@@ -1,0 +1,70 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "crx5ia"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp8dqhi1_e/crx5ia.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_crx5ia_4h6a7821/usdex_crx5ia/crx5ia.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_crx5ia_4h6a7821/temp_crx5ia/crx5ia.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "crx5ia"
+{
+    over "Physics"
+    {
+        over "J1" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 150
+        }
+
+        over "J2" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 150
+        }
+
+        over "J3" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 180.00002
+        }
+
+        over "J4" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 225
+        }
+
+        over "J5" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 225
+        }
+
+        over "J6" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 225
+        }
+    }
+}
+

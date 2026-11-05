@@ -23,4 +23,5 @@ docker run --name isaac-sim-ws -it --rm \
   -v ~/docker/isaac-sim/documents:/root/isaac-sim/Documents:rw \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   -v $HOME/.Xauthority:/root/.Xauthority:ro \
+  -v ../robot_data:/root/robot_data:rw \
   isaac_ws:latest
