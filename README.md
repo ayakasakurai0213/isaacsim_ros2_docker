@@ -1,8 +1,8 @@
-# Isaac Sim と ROS 2 Humble
+# Isaac Sim と ROS 2 Jazzy
 
-このリポジトリには、Docker コンテナ内で NVIDIA Isaac Sim 4.5.0 と ROS 2 Humble 統合をセットアップするための設定ファイルとスクリプトが含まれています。
+このリポジトリには、Docker コンテナ内で NVIDIA Isaac Sim 6.0.0 と ROS 2 Jazzy 統合をセットアップするための設定ファイルとスクリプトが含まれています。
 
-この環境を使用することで、ROS2を含めたIsaac Sim 4.5.0の環境を構築することができます。
+この環境を使用することで、ROS2を含めたIsaac Sim 6.0.0の環境を構築することができます。
 
 ## 前提条件
 
@@ -16,8 +16,8 @@
 ### 1. このリポジトリをクローンする
 
 ```bash
-git clone https://github.com/umegan/Isaacsim_humble.git isaac_humble
-cd isaac_humble
+git clone https://github.com/ayakasakurai0213/isaacsim_ros2_docker.git -b jazzy
+cd isaacsim_ros2_docker
 ```
 
 ### 2. Docker イメージをビルドする
@@ -27,7 +27,7 @@ cd docker
 docker build -t isaac_ws:latest .
 ```
 
-これにより、NVIDIA の Isaac Sim 4.5.0 イメージをベースに、ROS 2 Humble 統合を含むカスタム Docker イメージがビルドされます。
+これにより、NVIDIA の Isaac Sim 4.5.0 イメージをベースに、ROS 2 Jazzy 統合を含むカスタム Docker イメージがビルドされます。
 
 ### 3. 永続ストレージ用の必要なディレクトリを作成する
 
@@ -65,13 +65,13 @@ https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/download.html
 ├── LICENSE - MIT ライセンス
 ├── README.md - このファイル
 └── docker/
-    ├── Dockerfile - Isaac Sim + ROS 2 Humble イメージをビルドする
+    ├── Dockerfile - Isaac Sim + ROS 2 Jazzy イメージをビルドする
     └── isaac_sim_docker.sh - Isaac Sim コンテナを実行するスクリプト
 ```
 
 ## 注意事項
 
-- Docker イメージは公式の NVIDIA Isaac Sim 4.5.0 イメージをベースに ROS 2 Humble を追加しています
+- Docker イメージは公式の NVIDIA Isaac Sim 4.5.0 イメージをベースに ROS 2 Jazzy を追加しています
 - コンテナはホストの X11 サーバーを使用して GUI を表示します
 - データの永続性はホストファイルシステムへのボリュームマウントによって管理されています
 - RViz2 および一般的な ROS 2 ツールがコンテナにインストールされています
