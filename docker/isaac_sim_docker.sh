@@ -4,7 +4,7 @@
 # このスクリプトは、サーバのローカルXサーバー（通常 DISPLAY=:0）にコンテナ内のGUIアプリケーションを表示するための例です。
 
 # サーバのローカルXサーバーへのアクセスを許可
-xhost +
+# xhost +
 
 docker run --name isaac-sim-ws -it --rm \
   --runtime=nvidia --gpus all \
@@ -23,5 +23,5 @@ docker run --name isaac-sim-ws -it --rm \
   -v ~/docker/isaac-sim/documents:/root/isaac-sim/Documents:rw \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   -v $HOME/.Xauthority:/root/.Xauthority:ro \
-  -v ../robot_data:/root/robot_data:rw \
+  -v "$(realpath ../robot_data)":/root/robot_data:rw \
   isaac_ws:latest
