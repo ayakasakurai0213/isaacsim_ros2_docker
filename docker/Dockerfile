@@ -91,10 +91,10 @@ RUN curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64
 ENV PATH="/opt/conda/bin:${PATH}"
 
 # Install Isaac lab
-RUN git clone https://github.com/isaac-sim/IsaacLab.git --branch main /IsaacLab \
-    && cd /IsaacLab \
-    && ln -s /isaac-sim _isaac_sim \
-    && ./isaaclab.sh --install
+# RUN git clone https://github.com/isaac-sim/IsaacLab.git --branch main /IsaacLab \
+#     && cd /IsaacLab \
+#     && ln -s /isaac-sim _isaac_sim \
+#     && ./isaaclab.sh --install
 
 
 # Option 1: Clone your local TurtleBot3 Lime sources at runtime via -v
